@@ -32,9 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${poppins.variable} ${inconsolata.variable} bg-surface text-text font-sans antialiased min-h-screen`}>
+      <body className={`${roboto.variable} ${poppins.variable} ${inconsolata.variable} font-sans antialiased min-h-screen`}>
         {children}
-              <CookieBanner />
+        <CookieBanner />
       </body>
     </html>
   );
