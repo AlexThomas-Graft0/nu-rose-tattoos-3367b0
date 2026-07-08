@@ -3,7 +3,21 @@
 import { useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { supabase } from '@/lib/supabaseClient';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Loader2, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Loader2, CheckCircle2, AlertCircle, ArrowRight } from 'lucide-react';
+
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -195,7 +209,7 @@ export function ContactAndBooking() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-gray-50 text-[#111827] hover:bg-gray-100 transition-colors border border-gray-100 shadow-sm"
                 >
-                  <Instagram className="w-5 h-5 text-[#3B82F6]" />
+                  <InstagramIcon className="w-5 h-5 text-[#3B82F6]" />
                   <span className="font-medium text-sm">Instagram</span>
                 </a>
                 <a 
@@ -204,7 +218,7 @@ export function ContactAndBooking() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-3 rounded-full bg-gray-50 text-[#111827] hover:bg-gray-100 transition-colors border border-gray-100 shadow-sm"
                 >
-                  <Facebook className="w-5 h-5 text-[#3B82F6]" />
+                  <FacebookIcon className="w-5 h-5 text-[#3B82F6]" />
                   <span className="font-medium text-sm">Facebook</span>
                 </a>
               </div>
